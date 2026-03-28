@@ -5,13 +5,13 @@ on:
 jobs:
   myfirstjob:
    env:
-      FIRST_NAME: Mona
+      MY_NAME: Mona
    # continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       run: echo "hello $FIRST_NAME"
+       run: echo "hello $MY_NAME"
   # mysecondjob:
   #  needs: myfirstjob
   #  # if: always()
