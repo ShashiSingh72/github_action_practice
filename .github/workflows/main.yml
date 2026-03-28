@@ -1,11 +1,11 @@
 name: myfirstpipeline
-
+ 
 on:
   workflow_dispatch:  #manual trigger
+env:
+  MY_NAME: Mona 
 jobs:
   myfirstjob:
-   env:
-      WIN_NAME: Mona
    # continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
@@ -19,4 +19,4 @@ jobs:
    runs-on: windows-latest # agent hai ye
    steps:
      - name: 
-       run: write-host "hello meri jaan $env:WIN_NAME"
+       run: write-host "hello meri jaan $env:MY_NAME"
