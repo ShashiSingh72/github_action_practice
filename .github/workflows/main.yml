@@ -4,17 +4,19 @@ on:
   workflow_dispatch:  #manual trigger
 jobs:
   myfirstjob:
+   env: 
+     NAME = 'Mona'
    continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       run: ech "hello guys"
-  mysecondjob:
-   needs: myfirstjob
-   # if: always()
-   name: second_job_name
-   runs-on: windows-latest # agent hai ye
-   steps:
-     - name: 
-       run: write-host "hello guys1"
+       run: ech "hello $NAME"
+  # mysecondjob:
+  #  needs: myfirstjob
+  #  # if: always()
+  #  name: second_job_name
+  #  runs-on: windows-latest # agent hai ye
+  #  steps:
+  #    - name: 
+  #      run: write-host "hello guys1"
