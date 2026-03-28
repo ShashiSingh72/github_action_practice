@@ -5,7 +5,7 @@ on:
 jobs:
   myfirstjob:
    env:
-      MY_NAME: Mona
+      WIN_NAME: Mona
    # continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
@@ -19,4 +19,4 @@ jobs:
    runs-on: windows-latest # agent hai ye
    steps:
      - name: 
-       run: write-host "hello $env:MY_NAME"
+       run: write-host "hello $env.WIN_NAME"
