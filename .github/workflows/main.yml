@@ -10,7 +10,8 @@ jobs:
      - name: 
        run: echo "hello guys"
   mysecondjob:
-   needs: myfirstjob
+   # needs: myfirstjob
+   if always{}
    name: second_job_name
    runs-on: windows-latest # agent hai ye
    steps:
