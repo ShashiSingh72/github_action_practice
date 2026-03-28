@@ -4,5 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   myfirstjob:
-   name: my_first_job
-   runs-on: echo "hello insiders"
+   runs-on: ubuntu-latest
+   steps:
+     - name: 
+       run: echo "hello guys"
