@@ -12,11 +12,11 @@ jobs:
    steps:
      - name: 
        run: echo "hello $MY_NAME"
-  # mysecondjob:
-  #  needs: myfirstjob
-  #  # if: always()
-  #  name: second_job_name
-  #  runs-on: windows-latest # agent hai ye
-  #  steps:
-  #    - name: 
-  #      run: write-host "hello guys1"
+  mysecondjob:
+   # needs: myfirstjob
+   # if: always()
+   name: second_job_name
+   runs-on: windows-latest # agent hai ye
+   steps:
+     - name: 
+       run: write-host "hello $env.MY_NAME"
