@@ -4,14 +4,15 @@ on:
   workflow_dispatch:  #manual trigger
 jobs:
   myfirstjob:
+   continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
        run: ech "hello guys"
   mysecondjob:
-   # needs: myfirstjob
-   if: always()
+   needs: myfirstjob
+   # if: always()
    name: second_job_name
    runs-on: windows-latest # agent hai ye
    steps:
