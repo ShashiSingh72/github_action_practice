@@ -4,14 +4,14 @@ on:
   workflow_dispatch:  #manual trigger
 jobs:
   myfirstjob:
-   env: 
-     NAME = 'Mona'
-   continue-on-error: true
+   env:
+      FIRST_NAME: Mona
+   # continue-on-error: true
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       run: ech "hello $NAME"
+       run: ech "hello $FIRST_NAME"
   # mysecondjob:
   #  needs: myfirstjob
   #  # if: always()
