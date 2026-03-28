@@ -4,12 +4,14 @@ on:
   workflow_dispatch:  #manual trigger
 jobs:
   myfirstjob:
+   name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
        run: echo "hello guys"
   mysecondjob:
+   name: second_job_name
    runs-on: windows-latest # agent hai ye
    steps:
      - name: 
-       run: write-hos "hello guys"
+       run: write-host "hello guys1"
