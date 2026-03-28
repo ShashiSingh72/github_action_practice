@@ -2,8 +2,8 @@ name: myfirstpipeline
  
 on:
   workflow_dispatch:  #manual trigger
-env:
-  MY_NAME: Mona 
+# env:
+#   MY_NAME: Mona 
 jobs:
   myfirstjob:
    # continue-on-error: true
@@ -11,7 +11,8 @@ jobs:
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       run: echo "hello $MY_NAME"
+       # run: echo "hello $MY_NAME"
+       run: echo "my first devops job at 12 LPA"
   mysecondjob:
    # needs: myfirstjob
    # if: always()
@@ -19,4 +20,5 @@ jobs:
    runs-on: windows-latest # agent hai ye
    steps:
      - name: 
-       run: write-host "hello meri jaan $env:MY_NAME"
+       # run: write-host "hello meri jaan $env:MY_NAME"
+       run: echo "meri pahali devops job"
