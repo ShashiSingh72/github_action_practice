@@ -11,7 +11,7 @@ jobs:
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       run: ech "hello $FIRST_NAME"
+       run: echo "hello $FIRST_NAME"
   # mysecondjob:
   #  needs: myfirstjob
   #  # if: always()
