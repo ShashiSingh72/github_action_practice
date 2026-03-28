@@ -12,7 +12,7 @@ jobs:
    steps:
      - name: 
        # run: echo "hello $MY_NAME"
-       run: echo "my first devops job at 12 LPA"
+       run: echo "my first devops job at 12 LPA to ${{vars.MY_NAME}}"
   mysecondjob:
    # needs: myfirstjob
    # if: always()
