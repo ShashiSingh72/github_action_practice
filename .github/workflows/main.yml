@@ -3,22 +3,23 @@ name: myfirstpipeline
 on:
   workflow_dispatch:  #manual trigger
 # env:
-#   MY_NAME: Mona 
+#   MY_NAME: Mona env banane ke liye
 jobs:
   myfirstjob:
-   # continue-on-error: true
+   # continue-on-error: true condition ke liye
    name: first_job_name
    runs-on: ubuntu-latest # agent hai ye
    steps:
      - name: 
-       # run: echo "hello $MY_NAME"
-       run: echo "my first devops job at 12 LPA to ${{vars.MY_NAME}}"
+       # run: echo "hello $MY_NAME" ye upr jo env hai uske liye hai
+       # run: echo "my first devops job at 12 LPA to ${{vars.MY_NAME}}" ye setting ke group wala env hai
+       run: echo "meri first devops job ${{secrets.MY_MONEY}}
   mysecondjob:
-   # needs: myfirstjob
-   # if: always()
+   # needs: myfirstjob pahala job chalega tabhi dusra chalega
+   # if: always() pahla bhad me jaye but dusra chalega
    name: second_job_name
    runs-on: windows-latest # agent hai ye
    steps:
      - name: 
-       # run: write-host "hello meri jaan $env:MY_NAME"
-       run: echo "meri pahali devops job"
+       # run: write-host "hello meri jaan $env:MY_NAME" upr wale env ke liye
+       run: echo "meri pahali devops job ${{secrets.MY_MONEY}} setting wala env
